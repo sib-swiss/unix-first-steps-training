@@ -1,12 +1,17 @@
 # First steps with UNIX course
 
-Home page of the First steps with UNIX SIB course.
+Welcome to the home page of the **First steps with UNIX** SIB course.
+
+<br>
 
 ### Course material
-* **[Course slides](first_steps_with_UNIX.pdf)**
-* **[Exercise instructions](exercise_instructions.md)**
+
+* [Course slides](first_steps_with_UNIX.pdf)
+* [Exercise instructions](exercise_instructions.md)
+* [Exercise material](exercises.zip)
 
 ### Setting-up your environment
+
 Please make sure to read this and setup your environment
 **before the start of the course**.
 
@@ -25,6 +30,7 @@ reasonably recent version of either a `bash` shell (version >= `4.0`), or a
 ## Course description
 
 ### Overview
+
 With the constant evolution of technologies, life scientists such as laboratory
 **biologists** are faced with an increasing need for **bioinformatics skills**
 to deal with high-throughput data storage, retrieval and analysis.
@@ -39,12 +45,15 @@ This course is an introduction to using computers in **command line** via a
 core UNIX commands.
 
 ### Audience
+
 This course is addressed to **beginners** wanting to become familiar with the
 UNIX environment and master the most common commands, which could be useful to
 run software dedicated to high-throughput data management.
 
 ### Learning objectives
+
 At the end of the course you should:
+
 * Be able to execute most basic UNIX commands
 * Be able to build complex and combined commands using various parameters
 * Be sufficiently skilled for further courses requiring basics of UNIX, like
@@ -58,9 +67,11 @@ for 0.25 ECTS credits.
 ## Prerequisites
 
 ### Knowledge / Skills
+
 This is a course for beginners, and no background in UNIX or any programming
 language is required.
 
 ### Technical
+
 A laptop with a command line terminal and a relatively recent version of
 Bash (>= 4.0).
