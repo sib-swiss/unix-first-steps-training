@@ -8,7 +8,7 @@ Please read the following instructions before starting the exercises:
 
 * **Exercise material setup:** download the
   [exercises.zip](exercises.zip) archive file to your local computer and
-  unzip it. This will unpack a directory named `exercises` with all data
+  unzip it. This will unpack a directory named `exercises`, with all the data
   needed for the course exercises.
 
 * **Exercise solutions:** all exercises and Additional Tasks section have their
@@ -16,7 +16,7 @@ Please read the following instructions before starting the exercises:
   you can reveal them by clicking on the drop-down menu, like this one:
   
   <details><summary><b>Exercise solution (click me)</b></summary>
-  ...This would reveal the answer...
+  :sparkles: This reveals the answer :sparkles:
   </details>
 
   We encourage you to *not* look at the solutions too quickly, and try to
@@ -42,10 +42,10 @@ the content of directories.
    show you where you currently are in the directory tree.
 
 2. **Navigate to the `exercises/` directory** (the one you unpacked from the
-   zip archive file), and then enter the `exercise_1` directory.
+   zip archive file), and then enter the `exercise_1` subdirectory.
 
-3. **Try to run the commands `cd .` and `cd ..`**. What happens? What does
-   `.` and `..` stand for?
+3. **Try to run the commands `cd .` and `cd ..`**  
+   What happens? What does `.` and `..` stand for?
 
 4. **List the content** of the `exercise_2/` directory with `ls`, `ls -l`,
    `ls -lh`, and `ls -lha`.
@@ -63,6 +63,14 @@ the content of directories.
 5. **List the content of the directory in chronological order** (oldest file
    first) and in reverse chronological order (newest file first).
 
+:fire:
+**Tip:** a very handy functionality that the shell provides is the ability to
+**auto-complete file/directory names**. You simply have to start typing the
+start of a file/directory name, and then press on **TAB** on your keyboard. The
+shell will autocomplete (as much as possible) the file name. You can try this
+functionality to autocomplete the name of the file
+`a_regular_file_with_a_really_long_name.md`.
+
 <br>
 <details><summary><b>Exercise solution</b></summary>
 <p>
@@ -73,7 +81,7 @@ the content of directories.
     pwd
     ```
 
-2. Navigate to `exercises/exercise_1`.
+2. Navigate to `exercises/exercise_1`:
 
     ```sh
     cd /path/to/directory/exercises
@@ -93,12 +101,13 @@ the content of directories.
 3. The **`.`** symbol is a **shortcut for the current directory**. So running
    `cd .` has no effect since it simply changes to the same directory we are
    already in.
-
    The `.` shortcut is useful in some situations. E.g. if you want to copy
    a file to the current directory you can do `cp /file/to/copy .`, or you
    can run an executable located in the current directory with `./run_me.sh`.
 
-   The **`..`** symbol is a **shortcut to the parent directory**.
+   The **`..`** symbol is a **shortcut to the parent directory**. These
+   shortcuts can be combined, so e.g. `cd ../..` will go up to levels in the
+   directory tree.
 
 4. Listing the content of the `exercise_1/` directory with different `ls`
    options. The effect of the different options is described in the comments
@@ -114,7 +123,7 @@ the content of directories.
              # their size in bytes (octets).
     ls -lha  # Adding the "-a" option additionally displays hidden files and
              # directories. These are files/directories whose name starts with
-             # a dot ".". The "-a" is the 
+             # a dot ".".
              # Hidden files are often used to store program configurations.
     ```
 
@@ -123,7 +132,7 @@ the content of directories.
 
     ```sh
     ls -lht    # The "-t" option sorts by time, newest file first.
-    ls -lhtr   # The "-r" option reverse the order of sorting.
+    ls -lhtr   # The "-r" option reverses the order of sorting.
     ```
 
     Some other useful `ls` options and shortcuts:
@@ -162,7 +171,11 @@ the content of directories.
    * To remove an alias we use `unalias <alias name>`, or we remove it from
      the config file where it is defined.
 
-8. Let's look at a detail of how the bash shell displays file sizes.
+8. **Compute the size of a directory**. To display the size of a directory,
+   the command **`du -sh <directory>`** can be used. Try in on the directories
+   found in `exercise_1`.
+
+9. Let's look at a detail of how the bash shell displays file sizes.
 
    Go into the directory `a_directory` and list its content using the
    following commands - look at how file size is indicated:
@@ -171,10 +184,6 @@ the content of directories.
               a more readable format, using the `k`, `M`, `G`, ...
               unit abbreviations for `kB` (kilobyte), `MB` (megabyte), `GB`,
               (gigabyte) etc.
-   * `ls -lh --si`: adding the `--si` flag tells the shell to use the
-                    powers of 1000 instead of 1024 for `k`, `M`, `G` units.
-                    E.g., with the `--si` option, 1 kB is 1000 bytes, instead
-                    of 1024 bytes.
 
    :sparkles:
    *Note:* in everyday language, the term **kilobyte** (abbreviated `kB`) is
@@ -184,10 +193,6 @@ the content of directories.
    is a *kibibyte* `KiB`, while a *kilobyte* designates 1000 bytes. Similarly,
    a *megabyte* is 1'000'0000 bytes, and a *mebibyte* is 1024^2 bytes (same
    with *gigabyte* vs. *gibibytes*, *terabyte* vs.*tebibyte*, etc.).
-
-9. **Compute the size of a directory**. To display the size of a directory,
-   the command **`du -sh <directory>`** can be used. Try in on the directories
-   found in `exercise_1`.
 
 <br>
 <details><summary><b>Additional tasks solution</b></summary>
@@ -217,9 +222,7 @@ the content of directories.
     type bash   # -> bash is /usr/bin/bash
     ```
 
-8. Nothing to correct.
-
-9. Show the size of the directories:
+8. Show the size of the directories:
 
      ```sh
      du -sh a_directory  # 20 K (20 kilobytes)
@@ -229,6 +232,8 @@ the content of directories.
      # directories in a single command.
      du -sh ?_directory
      ```
+
+9. Nothing to correct.
 
 </p>
 </details>
@@ -249,20 +254,24 @@ names.
   **[filename expansion](https://www.gnu.org/software/bash/manual/bash.html#Filename-Expansion)**,
   but it is also very often referred to as **globbing**.
 * Globbing only matches **existing file/directory names**: expansion will not
-  happen is there is no matching file/directory.
+  happen is there is no matching file/directory. This is why it's official
+  name is *filename expansion*!
+* If you don't want a specific wildcard character to expand, you can
+  **escape it** by prefixing it with `\`. E.g. `ls test_\*.md` will try to
+  list a file named exactly `test_*.md`.
 
-Enter the directory `exercise_2/RedList_mammals` and list its content with
-the command `ls`.
+To start this exercise, enter the directory `exercise_2/RedList_mammals` and
+list its content with the command **`ls`**.
 You will see that it contains a large number of files, whose names are those
 of the critically endangered mammal species as listed in the
 [International Union for Conservation of Nature (IUCN) Red List](https://www.iucnredlist.org).
 
 The species names are given in
 [binomial nomenclature (i.e. latin names)](https://en.wikipedia.org/wiki/Binomial_nomenclature),
-and each file has the structure `Genus_species`. E.g., if there was file for
+and each file has the structure `Genus_species`. E.g. if there a was file for
 humans, it would be named `Homo_sapiens`.
 
-Using `ls` and wildcard characters, perform the following tasks:
+**Using `ls` and wildcard characters, perform the following tasks:**
 
 1. List all files starting with the letter `i` (upper or lower case).  
    :dart:
@@ -273,14 +282,15 @@ Using `ls` and wildcard characters, perform the following tasks:
    :dart:
    **Hint:** you should have 3 matches.
 
-3. List the files of Gibbon species from the genus *Nomascus* whose species
+3. List the files of Gibbon species from the genus
+   *[Nomascus](https://en.wikipedia.org/wiki/Nomascus)* whose species
    name ends with either `r` or `i`.  
    :dart:
    **Hint:** you should have 2 matches.
 
-4. List the files of species that meet *both* conditions:
+4. List the files of species that meet *both* following conditions:
    * The genus name contains the pattern "`l` + a single letter + a letter
-     between `a` and `h` (e.g. `lia` or `lug`).
+     between `a` and `h`", e.g. `lia` or `lug`.
    * The species name starts with a `g`.
 
    For instance, *Eubalaena glacialis*, the
@@ -303,9 +313,14 @@ Using `ls` and wildcard characters, perform the following tasks:
     ```
 
     :sparkles:
-    Since all file names start with a capital, `ls -l I*` is sufficient
+    Since all file names start with a capital letter, `ls -l I*` is sufficient
     to list all files starting with the letter `i`. If there were also files
     starting with lower case letters, we would use `ls -l [iI]*`
+
+    :warning:
+    Please note that `ls -l [iI]*` and `ls -l i* I*` are not completely
+    equivalent expressions: `ls -l i* I*` will return an error unless there are
+    both files starting with `i` and `I` (you can test it in your terminal).
 
 2. The critically endangered Rhino species are:
 
@@ -320,7 +335,7 @@ Using `ls` and wildcard characters, perform the following tasks:
 
    :sparkles:
    Since both the genus `Dicerorhinus` and `Diceros` start with `Dicero`,
-   we can match the pattern `Dicero*` to get both genus at the same time.
+   we can match the pattern `Dicero*` to get both genuses at the same time.
 
    :rhinoceros:
    There exists 2 other Rhino species:
@@ -381,7 +396,7 @@ Using `ls` and wildcard characters, perform the following tasks:
    **Hint:** you should have 4 matches.
 
 6. Try to add quotes (single or double) around a globbing pattern with
-   wildcards:
+   wildcards, e.g. `ls -l "I*"`:
    * What difference does it make (if any)?
    * Can you think of a use case for using quotes around a pattern with
      wildcards?
@@ -396,7 +411,7 @@ Using `ls` and wildcard characters, perform the following tasks:
     ```sh
     ls -l *[ao]??x_*[ra] *[ao]??x_*i  # Solution using pure globbing. Requires some duplication.
     ls -l *[ao]??x_*@(ra|i)           # Solution using pattern matching.
-    ls -l *[ao]??x_*{[ra],i}          # Solution using both globbing and brace expansion.
+    ls -l *[ao]??x_*{ra,i}            # Solution using both globbing and brace expansion.
 
     # Myosorex_eisentrauti  (Eisentraut's mouse shrew).
     # Pteralopex_flanneryi  (Greater monkey-faced bat).
@@ -568,7 +583,7 @@ Enter the directory `exercise_3/` and perform the following tasks:
     mkdir -p species_by_{genus/{Dendrolagus,Crocidura},common_name/{R,B}}
     ```
 
-    :sparkles:
+    :fire:
     *Tip:* if you want to preview the output of a brace expansion by
     the shell, you can run the command prefixed with `echo`: it will print
     the command that would be executed to the terminal without running the
@@ -627,11 +642,11 @@ Enter the directory `exercise_3/` and perform the following tasks:
     :kangaroo:
     *Note:* the faster way to delete the directory and all of its content is
     to use the command: `rm -rf Tree-kangaroos`.
-
-    This recursively delete the directory, and therefore one has to be careful
-    to delete the correct directory, as you can otherwise very quickly
-    delete large amounts of data by mistake, which can be problematic as
-    **there is no command to undo file deletion**.
+    * :warning:
+      This recursively delete the directory, and therefore one has to be
+      careful to delete the correct directory, as you can otherwise very
+      quickly delete large amounts of data by mistake, which can be problematic
+      as **there is no command to undo file deletion**.
 
 </p>
 </details>
@@ -847,13 +862,21 @@ Then perform the following tasks:
     cd ./exercise_5/fasta_files/
     ```
 
-1. Display the first 10 lines and last 5 lines.
+1. Display the first 10 and last 5 lines.
 
     ```sh
     head protein_sequences.fasta      # No need to specify -n 10 in this case
                                       # because 10 is the default value.
     tail -5 protein_sequences.fasta
     ```
+
+   :fire:
+   **Tips:**
+   * If you want to display the entire file except for the last `X` lines you
+     can use `head -n-X` (replace `X` by the number of lines you want to skip
+     at the end of the file).
+   * Conversely, `tail -n+X` will skip the first `X` lines, and then print all
+     the remaining lines till the end of the file.
 
 2. Count the number of lines and words in the file.
 
@@ -1353,7 +1376,8 @@ Here is a suggested way to perform this task:
   `| head` so that you avoid printing the whole file each time.
 
 :dart:
-<details><summary><b>Additional hints (click if you need more help)</b></summary>
+**Additional hints:**
+<details><summary><b>click to show more hints, if needed</b></summary>
 <p>
 
 Here are some commands and their options that are useful for this exercise:
@@ -1428,7 +1452,7 @@ the scope of this course.
 
 This is not an easy one, but it's the last!
 
-Our objective here is to write a short **`for` loop** that performs the task
+Our objective is to write a short **`for` loop** that performs the task
 of copying each species files found in the `exercise_2/RedList_mammals`
 directory into the correct directory for its genus in a `species_by_genus`
 directory.
