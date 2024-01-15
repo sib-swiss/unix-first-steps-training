@@ -7,5 +7,9 @@
       "b",
       "p"
     ]
-  }
+  },
+  "MD013": {
+    "code_block_line_length": 100
+  },
+  "MD029": false
 }
