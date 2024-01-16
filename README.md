@@ -4,11 +4,13 @@ Welcome to the home page of the **First steps with UNIX** SIB course.
 
 <br>
 
+## Course material and setup
+
 ### Course material
 
 * [Course slides](first_steps_with_UNIX.pdf)
 * [Exercise instructions](exercise_instructions.md)
-* [Exercise material](exercises.zip)
+* [Exercise material](https://github.com/sib-swiss/unix-first-steps-training/blob/main/exercises.zip)
 
 ### Setting-up your environment
 
