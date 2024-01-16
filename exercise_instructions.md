@@ -256,7 +256,8 @@ names.
 * Globbing only matches **existing file/directory names**: expansion will not
   happen is there is no matching file/directory. This is why it's official
   name is *filename expansion*!
-* If you don't want a specific wildcard character to expand, you can
+* :fire:
+  **Tip:** If you don't want a specific wildcard character to expand, you can
   **escape it** by prefixing it with `\`. E.g. `ls test_\*.md` will try to
   list a file named exactly `test_*.md`.
 
@@ -1040,9 +1041,9 @@ and content.
 ### Step 2: conversion to tab-delimited values
 
 The original files contain tabulated data separated by a `;` (semi-column)
-character.
+character. We would like to change this separator to a tab `\t`.
 
-* Convert the delimiters from `;` to `\t` (tab).
+* Convert the delimiters from `;` to `\t` (tab) using the command **`tr`**.
 * Save the converted content into a new file with a `.tsv` extension. E.g. the
   converted version of `array_data-1.csv` should be named `array_data-1.tsv`.
 
@@ -1080,10 +1081,10 @@ files need to be sorted by their 1st column (`ProbeID`).
 
 * Sort each `array_data-*.tsv` file by its `ProbeID` column using the
   **`sort`** command.
-* Make sure that the **header line** of the file remain at the top after the
+* Make sure that the **header line** of the file remains at the top after the
   sorting operation.  
   :dart:
-  **Hint:** the header line is the only one that starts with a letter, so we
+  **Hint:** the header line is the only line that starts with a letter, so we
   can take advantage of *numerical sorting* that sorts letters before numbers.
   You can have a look at `man sort` (the help for the `sort` command) to find
   the right option.
