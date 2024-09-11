@@ -5,7 +5,8 @@ Please complete the setup instructions given in this document
 
 <br>
 
-### Mac OS
+## Mac OS
+
 **No need to install anything**: Mac OS comes by default with a "Terminal"
 application that launches a `zsh` shell. For the most part, `zsh` and `bash`
 behave very similarly, and it is possible to do the course using `zsh` instead
@@ -17,11 +18,13 @@ Mac OS Catalina, released in 2019).
 
 <br>
 
-### Windows
+## Windows
+
 Windows does not natively come with a `bash` shell, but it can be installed
 via different means.
 
 We here suggest 2 options, in order of ease of installation (easiest first):
+
 * Install [Git for windows](https://gitforwindows.org), which comes with the
   `bash` shell emulator `GitBash`.
 * Install/Enable **WSL**, the Windows Subsystem for Linux. This essentially
@@ -33,11 +36,13 @@ We here suggest 2 options, in order of ease of installation (easiest first):
 
 <br>
 
-### Linux
+## Linux
+
 **No need to install anything**: virtually all Linux distribution come with a
 recent version of `bash` installed out-of-the-box.
 
 To check your version of `bash`, open a terminal and run:
+
 ```sh
 bash --version
 ```

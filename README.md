@@ -9,8 +9,8 @@ Welcome to the home page of the **First steps with UNIX** SIB course.
 ### Course material
 
 * [Course slides](first_steps_with_UNIX.pdf)
-* [Exercise instructions](exercise_instructions.md)
-* [Exercise material](https://github.com/sib-swiss/unix-first-steps-training/blob/main/exercises.zip)
+* [Exercises instructions](exercise_instructions.md)
+* [Exercises material](https://github.com/sib-swiss/unix-first-steps-training/raw/main/exercises.zip)
 
 ### Setting-up your environment
 
@@ -20,6 +20,7 @@ Please make sure to read this and setup your environment
 The only technical requirement for the course is having a laptop with a
 reasonably recent version of either a `bash` shell (version >= `4.0`), or a
 `zsh` shell (the default shell on Mac OS since 2019).
+You can display your version of `bash` with the command `bash --version`.
 
 * **Linux and Mac OS**: the above requirements should in principle already
   be met, and there should be no need to install anything.
