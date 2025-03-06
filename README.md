@@ -1,10 +1,11 @@
-# First steps with UNIX course
+# First steps with Linux / UNIX and the Bash shell
 
-Welcome to the home page of the **First steps with UNIX** SIB course.
+Welcome to the home page of the
+**First steps with Linux / UNIX and the Bash shell** SIB course.
 
 <br>
 
-## Course material and setup
+## Course material and environment setup :hatching_chick:
 
 ### Course material
 
@@ -12,27 +13,22 @@ Welcome to the home page of the **First steps with UNIX** SIB course.
 * [Exercises instructions](exercise_instructions.md)
 * [Exercises material](https://github.com/sib-swiss/unix-first-steps-training/raw/main/exercises.zip)
 
-### Setting-up your environment
-
-Please make sure to read this and setup your environment
-**before the start of the course**.
+### Environment setup
 
 The only technical requirement for the course is having a laptop with a
 reasonably recent version of either a `bash` shell (version >= `4.0`), or a
 `zsh` shell (the default shell on Mac OS since 2019).
 You can display your version of `bash` with the command `bash --version`.
 
-* **Linux and Mac OS**: the above requirements should in principle already
-  be met, and there should be no need to install anything.
-* **Windows**: please see the
-  [setting-up your environment instructions](environment_setup.md) for
-  instructions on how to install a `bash` shell on your machine.
+* Please read the **[environment setup instructions](environment_setup.md)**
+  for details.
+* Make sure to setup your environment **before the start of the course**.
 
 <br>
 
 ## Course description
 
-### Overview
+### Overview :owl:
 
 With the constant evolution of technologies, life scientists such as laboratory
 **biologists** are faced with an increasing need for **bioinformatics skills**
@@ -45,22 +41,21 @@ interface, many operations can be more efficiently handled with
 This course is an introduction to using computers in **command line** via a
 **terminal**, and more specifically the
 **[Bash shell](https://www.gnu.org/software/bash/)** as well as some of the
-core UNIX commands.
+core Linux / UNIX commands.
 
-### Audience
+### Audience :mega:
 
 This course is addressed to **beginners** wanting to become familiar with the
-UNIX environment and master the most common commands, which could be useful to
-run software dedicated to high-throughput data management.
+Linux / UNIX environment, its basic commands, and the Bash shell.
 
-### Learning objectives
+### Learning objectives :dart:
 
 At the end of the course you should:
 
-* Be able to execute most basic UNIX commands
+* Be able to execute most of the basic Linux / UNIX commands.
 * Be able to build complex and combined commands using various parameters
-* Be sufficiently skilled for further courses requiring basics of UNIX, like
-  HPC or NGS courses
+* Be sufficiently skilled for further courses requiring basics of Linux / UNIX,
+  like HPC or NGS courses.
 
 An optional exam can be taken at the end of the course to get a recommendation
 for 0.25 ECTS credits.
@@ -69,12 +64,12 @@ for 0.25 ECTS credits.
 
 ## Prerequisites
 
-### Knowledge / Skills
+### Knowledge / Skills :bulb:
 
-This is a course for beginners, and no background in UNIX or any programming
-language is required.
+This is a **course for beginners**, no background in Linux / UNIX or any
+programming language is required.
 
-### Technical
+### Technical :computer:
 
 A laptop with a command line terminal and a relatively recent version of
-Bash (>= 4.0).
+Bash (>= `4.0`).
