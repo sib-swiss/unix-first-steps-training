@@ -12,6 +12,7 @@ Welcome to the home page of the
 * [Course slides](first_steps_with_UNIX.pdf)
 * [Exercises instructions](exercise_instructions.md)
 * [Exercises material](https://github.com/sib-swiss/unix-first-steps-training/raw/main/exercises.zip)
+* [Exam instructions](exam_instructions.md)
 
 ### Environment setup
 
