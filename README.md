@@ -3,6 +3,11 @@
 Welcome to the home page of the
 **First steps with Linux / UNIX and the Bash shell** SIB course.
 
+This one-day course provides an introduction to the open source
+**[Linux](https://en.wikipedia.org/wiki/Linux)** /
+**[UNIX](https://en.wikipedia.org/wiki/Unix)**
+operating system, and the **[Bash shell](https://www.gnu.org/software/bash)**.
+
 <br>
 
 ## Course material and environment setup :hatching_chick:
@@ -26,6 +31,7 @@ You can display your version of `bash` with the command `bash --version`.
 * Make sure to setup your environment **before the start of the course**.
 
 <br>
+<br>
 
 ## Course description
 
@@ -39,10 +45,25 @@ Although several resources developed for such tasks have a graphical user
 interface, many operations can be more efficiently handled with
 **command-line** programs and utilities.
 
-This course is an introduction to using computers in **command line** via a
-**terminal**, and more specifically the
-**[Bash shell](https://www.gnu.org/software/bash/)** as well as some of the
-core Linux / UNIX commands.
+This course provides an **introduction to using the Linux / UNIX** operating
+system via the **command line interface (CLI)**, as well as an introduction to
+the **[Bash shell](https://www.gnu.org/software/bash/)** and some of the
+Linux / UNIX **core utilities** commands.
+
+More specifically, the course covers the following topics:
+
+* What is Linux / UNIX and why use it?
+* Navigating the file system.
+* Shell expansions: brace, tilde, and filename expansion.
+* File and directory management: create, move, copy, delete.
+* File access permissions and ownership.
+* Locating files: the `find` command.
+* Displaying file content.
+* Archiving and compressing data.
+* Standard input/output and pipes.
+* Text processing utilities: `wc`, `tr`, `sort`, `uniq`, `cut`, `diff`, `cat`,
+  `paste`.
+* Introduction to `grep` and regular expressions.
 
 ### Audience :mega:
 
@@ -54,7 +75,7 @@ Linux / UNIX environment, its basic commands, and the Bash shell.
 At the end of the course you should:
 
 * Be able to execute most of the basic Linux / UNIX commands.
-* Be able to build complex and combined commands using various parameters
+* Be able to build simple pipelines by combining different UNIX commands.
 * Be sufficiently skilled for further courses requiring basics of Linux / UNIX,
   like HPC or NGS courses.
 

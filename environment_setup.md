@@ -50,4 +50,4 @@ To check your version of `bash`, open a terminal and run:
 bash --version
 ```
 
-Ideally you should have version of bash >= 5.x.
+Ideally you should have version of bash >= `5.x` (but at least >= `4.x`).
