@@ -1,4 +1,4 @@
-# First steps with Linux / UNIX and the Bash shell
+# Introduction to Linux / UNIX and the Bash shell
 
 Welcome to the home page of the
 **First steps with Linux / UNIX and the Bash shell** SIB course.
@@ -14,7 +14,7 @@ operating system, and the **[Bash shell](https://www.gnu.org/software/bash)**.
 
 ### Course material
 
-* [Course slides](first_steps_with_UNIX.pdf)
+* [Course slides](slides_intro_to_unix.pdf)
 * [Exercises instructions](exercise_instructions.md)
 * [Exercises material](https://github.com/sib-swiss/unix-first-steps-training/raw/main/exercises.zip)
 * [Exam instructions](exam_instructions.md)
