@@ -1,4 +1,4 @@
-# First Steps with UNIX: setting-up your environment
+# Introduction to Linux / UNIX and the Bash shell: setting-up your environment
 
 Please complete the setup instructions given in this document
 **before the start of the course**.
