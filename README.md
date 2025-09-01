@@ -18,6 +18,8 @@ operating system, and the **[Bash shell](https://www.gnu.org/software/bash)**.
 * [Exercises instructions](exercise_instructions.md)
 * [Exercises material](https://github.com/sib-swiss/unix-first-steps-training/raw/main/exercises.zip)
 * [Exam instructions](exam_instructions.md)
+* [FAQ](faq.md) - a list of questions asked during previous instances of the
+  course.
 
 ### Environment setup
 

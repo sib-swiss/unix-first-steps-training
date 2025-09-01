@@ -265,7 +265,7 @@ they are separate executable programs located in directories like `/bin` or
 `/usr/bin`.
 
 To display the help for `cd` (or other built-in commands), you must use
-`help cd`.
+`help cd` or `cd --help`.
 
 <br>
 <br>
@@ -300,7 +300,7 @@ Here is an example:
 
 ```sh
 sleep 60 &    # the “sleep 60” command will do nothing for 60 seconds, then exit.
-jobs -l       # This will show: [1]+ 199704 Running             	sleep 60 &
+jobs -l       # This will show: [1]+ 199704 Running sleep 60 &
 ```
 
 <br>
