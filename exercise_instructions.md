@@ -193,7 +193,7 @@ Open a new terminal (shell) and perform the following tasks:
    * You can now press the **Enter** key on your keyboard to run the `ls`
      command with the auto-completed file name.
 
-6. In the current working directory, **run the command `cd .`**. You should
+6. In the current working directory, **run the command `cd .`** - you should
    observe that this command has **no net effect** (i.e. it did not change
    directory).
    * :question:
@@ -357,9 +357,10 @@ Open a new terminal (shell) and perform the following tasks:
   happen if there is no matching file/directory. This is why it's official
   name is *filename expansion*.
 * :fire:
-  **Tip:** If you don't want a specific wildcard character to expand, you can
-  **escape it** by prefixing it with **`\`**.  
-  E.g. `ls test_\*.md` will try to list a file named exactly `test_*.md`.
+  **Tip:** If you don't want a specific wildcard character to expand
+  (e.g. to list a file named exactly `test_*.md`.), you can:
+  * **Quote it** (single or double quote): `ls "test_*.md"` or `ls 'test_*'.md`
+  * **Escape it** by prefixing it with **`\`**: `ls test_\*.md`
 
 <br>
 
@@ -719,7 +720,7 @@ Enter the directory `exercise_3/` and perform the following tasks:
    <br>
    </details>
 
-3. **Move and rename** the Red Wold file with the **`mv`** command:
+3. **Move and rename** the Red Wolf file with the **`mv`** command:
    * Enter the `species_by_common_name` directory.
    * In the directory, move the file `Canis_rufus` into subdirectory `R`.
    * Rename the `Canis_rufus` file you just moved into the subdirectory `R` to
@@ -1285,13 +1286,13 @@ steps.
 
 <br>
 
-### Step 1: data exploration
+### Data exploration
 
 Enter the directory `exercise_6/micro-array/data` and have a look at the
 3 input files using `less` or `head`, to get familiar with their structure
 and content.
 
-<details><summary><b>:white_check_mark: Step 1 solution</b></summary>
+<details><summary><b>:white_check_mark: Solution</b></summary>
 
 ```sh
 cd exercise_6/micro-array/data/
@@ -1304,7 +1305,7 @@ less array_data-1.csv       # Reminder: to exit `less`, press "q".
 <br>
 </details>
 
-### Step 2: conversion to tab-delimited values
+### Step 1: conversion to tab-delimited values
 
 The original files contain tabulated data separated by a **`;`** (semi-column)
 character. We would like to change this separator to a Tab **`\t`**.
@@ -1320,7 +1321,7 @@ character. We would like to change this separator to a Tab **`\t`**.
     i.e. it does not accept a file name as argument. Therefore, you need to
     redirect the content of a file to standard input with `< FILE_NAME`.
 
-<details><summary><b>:white_check_mark: Step 2 solution</b></summary>
+<details><summary><b>:white_check_mark: Step 1 solution</b></summary>
 
 ```sh
 tr ";" "\t" < array_data-1.csv > array_data-1.tsv
@@ -1340,7 +1341,7 @@ This is why we must use `tr < file` or `cat file | tr` to pass input to `tr`.
 <br>
 </details>
 
-### Step 3: sort the files
+### Step 2: sort the files
 
 Before we can merge the content of the 3 `array_data-*.tsv` files, we have to
 make sure that the order of rows in each file (i.e. the order of genes) are the
@@ -1360,7 +1361,7 @@ files need to be sorted by their 1st column (`ProbeID`).
     command) to find the right option.
 * Save the sorted output to files named `array_data-sorted-*.tsv`.
 
-<details><summary><b>:white_check_mark: Step 3 solution</b></summary>
+<details><summary><b>:white_check_mark: Step 2 solution</b></summary>
 
 ```sh
 sort -n array_data-1.tsv > array_data-sorted-1.tsv
@@ -1375,7 +1376,7 @@ for i in $(seq 1 3); do sort -n array_data-${i}.tsv > array_data-sorted-${i}.tsv
 <br>
 </details>
 
-### Step 4: verify the file sorting
+### Step 3: verify the file sorting
 
 In this step, we will double-check that the sorted files we created at the
 previous step (`array_data-sorted-*.tsv`) have the same number of lines
@@ -1397,7 +1398,7 @@ Proceed as follows:
   these files. Their only purpose was to allow us to check that all files
   have their lines sorted in the same order.
 
-<details><summary><b>:white_check_mark: Step 4 solution</b></summary>
+<details><summary><b>:white_check_mark: Step 3 solution</b></summary>
 
 ```sh
 # Extract the first column of each file into a temporary file.
@@ -1428,7 +1429,7 @@ diff -s <(cut -f1 array_data-sorted-1.tsv) <(cut -f1 array_data-sorted-3.tsv)
 <br>
 </details>
 
-### Step 5: Merge the sorted files
+### Step 4: Merge the sorted files
 
 In this final step, we concatenate the content of the `array_data-sorted-*.tsv`
 files to produce a final file (`final.tsv`) with 4 columns:
@@ -1451,7 +1452,7 @@ ProbeID     Sample1   Sample2   Sample3
 ...
 ```
 
-<details><summary><b>:white_check_mark: Step 5 solution</b></summary>
+<details><summary><b>:white_check_mark: Step 4 solution</b></summary>
 
 ```sh
 paste array_data-sorted-*.tsv | cut -f 1,2,4,6 > final.tsv
