@@ -54,18 +54,20 @@ Linux / UNIX **core utilities** commands.
 
 More specifically, the course covers the following topics:
 
-* What is Linux / UNIX and why use it?
-* Navigating the file system.
-* Shell expansions: brace, tilde, and filename expansion.
-* File and directory management: create, move, copy, delete.
-* File access permissions and ownership.
-* Locating files: the `find` command.
-* Displaying file content.
-* Archiving and compressing data.
-* Standard input/output and pipes.
-* Text processing utilities: `wc`, `tr`, `sort`, `uniq`, `cut`, `diff`, `cat`,
-  `paste`.
-* Introduction to `grep` and regular expressions.
+* What are shells and core utilities, and why use them ?
+* Connecting to remote servers with `ssh` (not covered in details)
+* Filesystem overview and navigation: `ls` and `cd`
+* Basics of the bash shell syntax
+* Shell command history and help: `history`, `man`
+* Filename expansion (globbing)
+* File and directory management: `mkdir`, `mv`, `cp`, `rm`, `rmdir`
+* File access permissions and ownership
+* Locating files: `find`
+* Displaying file content: `head`, `tail`, `cat`, `less`, `wc`
+* Archiving and compressing data: `tar` and `gzip`
+* Standard input/output and pipes
+* Text processing utilities: `tr`, `sort`, `uniq`, `cut`, `cat` and `paste`
+* Introduction to `grep` and regular expressions
 
 ### Audience :mega:
 
